@@ -10,7 +10,7 @@ const HeroBanner = () => {
           <div>
             I will tell my life, &#160;
             <span className="inline bg-gray-200">of a Software Engineer</span>
-            &#160;👋🎙
+            &#160;👋
           </div>
         </h1>
         <br />
