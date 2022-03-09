@@ -14,24 +14,24 @@ export default function Post({ post, preview }) {
 
   return (
     <div>
+      <Head>
+        <title>{post.title} | Entrepreneurship study </title>
+        <meta name="description" content={post.excerpt} />
+        <meta name="title" content={post.title} />
+        <meta property="og:title" content="{post.title}" />
+        <meta
+          property="og:url"
+          content="http://next-js-tailwind-blog.vercel.app/"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:image" content={post.coverImage} />
+      </Head>
       <Layout preview={preview}>
         {router.isFallback ? (
           <div>Loading....</div>
         ) : (
           <>
-            <Head>
-              <title>{post.title} | Entrepreneurship study </title>
-              <meta name="description" content={post.excerpt} />
-              <meta name="title" content={post.title} />
-              <meta property="og:title" content="{post.title}" />
-              <meta
-                property="og:url"
-                content="https://blog.killiancartignies.com"
-              />
-              <meta property="og:type" content="article" />
-              <meta property="og:description" content={post.excerpt} />
-              <meta property="og:image" content={post.coverImage} />
-            </Head>
             <div>
               <h1>{post.title}</h1>
               <p>{post.excerpt}</p>

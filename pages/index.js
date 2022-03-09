@@ -5,12 +5,18 @@ import HeroBanner from '../components/HeroBanner';
 import Layout from '../components/Layout';
 import MoreStories from '../components/More-Stories';
 import { getAllPosts } from '../lib/api';
+import { motion } from 'framer-motion';
 
 export default function Home({ allPosts }) {
   const morePosts = allPosts.slice(0);
   console.log(morePosts);
   return (
-    <div className="">
+    <motion.div
+      className=""
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Layout>
         <Head />
         <HeroBanner />
@@ -18,7 +24,7 @@ export default function Home({ allPosts }) {
         <HeaderTitle />
         <MoreStories posts={morePosts} />
       </Layout>
-    </div>
+    </motion.div>
   );
 }
 export async function getStaticProps() {
