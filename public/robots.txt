@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://blog.killiancartignies.com
+
+# Sitemaps
+Sitemap: https://blog.killiancartignies.com/sitemap.xml
