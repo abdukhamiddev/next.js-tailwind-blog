@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://blog.killiancartignies.com
+Host: http://next-js-tailwind-blog.vercel.app
 
 # Sitemaps
-Sitemap: https://blog.killiancartignies.com/sitemap.xml
+Sitemap: http://next-js-tailwind-blog.vercel.app/sitemap.xml

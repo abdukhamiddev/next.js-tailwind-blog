@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.killiancartignies.com/404</loc>
+    <loc>http://next-js-tailwind-blog.vercel.app/404</loc>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://blog.killiancartignies.com/about</loc>
+    <loc>http://next-js-tailwind-blog.vercel.app/about</loc>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://blog.killiancartignies.com/articles</loc>
+    <loc>http://next-js-tailwind-blog.vercel.app/articles</loc>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://blog.killiancartignies.com</loc>
+    <loc>http://next-js-tailwind-blog.vercel.app</loc>
     <changefreq>weekly</changefreq>
   </url>
 
   <url>
-    <loc>https://blog.killiancartignies.com/posts</loc>
+    <loc>http://next-js-tailwind-blog.vercel.app/posts</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
