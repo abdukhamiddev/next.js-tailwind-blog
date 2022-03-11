@@ -29,6 +29,7 @@ const Dashboard = () => {
                     priority="true"
                     quality="100"
                     alt="Icon"
+                    className="rounded-[10px]"
                   />
                 </motion.div>
                 <div className="pl-5">
@@ -50,6 +51,7 @@ const Dashboard = () => {
                     priority="true"
                     quality="100"
                     alt="Icon"
+                    className="rounded-[10px]"
                   />
                 </motion.div>
                 <div className="pr-5 ml-6">

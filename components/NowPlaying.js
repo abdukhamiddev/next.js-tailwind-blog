@@ -11,6 +11,8 @@ const NowPlaying = () => {
           width={60}
           height={60}
           alt="headset"
+          className="rounded-[10px]"
+          quality="100"
         />
       </motion.div>
       <motion.div>

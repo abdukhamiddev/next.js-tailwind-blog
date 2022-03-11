@@ -22,11 +22,15 @@ const Header = () => {
 
           <div>
             <NextLink href="/about">
-              <a className="pr-3">About</a>
+              <a className="pr-3 p-1  pl-5 text-sm font-bold text-gray-900 transition-all sm:text-base sm:p-4 hover:text-red-300 duration-[0.9] ">
+                About
+              </a>
             </NextLink>
 
             <NextLink href="/articles">
-              <a className="pr-3">Articles</a>
+              <a className="pr-3 p-1  pl-5 text-sm font-bold text-gray-900 transition-all sm:text-base sm:p-4 hover:text-red-300 duration-[0.9] ">
+                Articles
+              </a>
             </NextLink>
           </div>
         </div>

@@ -8,7 +8,7 @@ const CoverImage = ({ title, src, slug, height, width, layout }) => {
       src={src}
       width={width}
       height={height}
-      quality={100}
+      quality="100"
       alt={`Post preview ${title}`}
       className="rounded-lg"
       layout={`${layout}`}
