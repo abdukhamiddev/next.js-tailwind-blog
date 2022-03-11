@@ -2,12 +2,19 @@ import React from 'react';
 import Link from 'next/link';
 import PostTitle from './PostTitle';
 import CoverImage from './coverImage';
+import { motion } from 'framer-motion';
+import { easing } from './easing';
 
 const PostHeader = ({ title, coverImage, date }) => {
   return (
     <div className="mt-16 mb-10 ">
-      <div className="ml-5 sm:ml-10">
-        <div className="flex items-center mt-10 mb-5">
+      <motion.div animate={{ transition: { staggerChildren: 0.05 } }}>
+        <motion.div
+          className="flex items-center mt-10 mb-5"
+          initial={{ y: -60, opacity: 0 }}
+          transition={{ duration: 0.8, ease: easing, delay: 0.2 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
           <div className="flex-initial">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +30,16 @@ const PostHeader = ({ title, coverImage, date }) => {
               <a>Back to home</a>
             </Link>
           </div>
-        </div>
-        <div className="mb-6">
+        </motion.div>
+        <motion.div
+          className="mb-6"
+          initial={{ y: -60, opacity: 0 }}
+          transition={{ duration: 0.8, ease: easing, delay: 0.6 }}
+          animate={{ y: 0, opacity: 1 }}
+        >
           <PostTitle title={title} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="">
         <div>
           <CoverImage

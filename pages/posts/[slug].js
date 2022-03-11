@@ -40,16 +40,20 @@ export default function Post({ post, preview }) {
           <div>Loading....</div>
         ) : (
           <>
-            <motion.div className="px-6">
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-              />
-            </motion.div>
-            <PostBody>{stringToMdx(post.content)}</PostBody>
-
-            <Avatar />
+            <div>
+              {' '}
+              <motion.div className="px-6">
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                />
+              </motion.div>
+              <PostBody>{stringToMdx(post.content)}</PostBody>
+              <div className="w-1/2 mx-auto my-8 border border-gray"></div>
+              <Avatar />
+            </div>
+            <div className="w-1/2 mx-auto my-8 border border-gray"></div>
           </>
         )}
       </Layout>
