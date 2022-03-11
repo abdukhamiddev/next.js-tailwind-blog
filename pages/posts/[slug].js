@@ -3,7 +3,10 @@ import ErrorPage from 'next/error';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
-import { mdxToString } from '../../lib/mdxSerialization';
+import { mdxToString, stringToMdx } from '../../lib/mdxSerialization';
+import { motion } from 'framer-motion';
+import PostHeader from '../../components/PostHeader';
+import PostBody from '../../components/PostBody';
 
 export default function Post({ post, preview }) {
   const router = useRouter();
@@ -13,7 +16,11 @@ export default function Post({ post, preview }) {
   }
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Head>
         <title>{post.title} | Entrepreneurship study </title>
         <meta name="description" content={post.excerpt} />
@@ -32,14 +39,18 @@ export default function Post({ post, preview }) {
           <div>Loading....</div>
         ) : (
           <>
-            <div>
-              <h1>{post.title}</h1>
-              <p>{post.excerpt}</p>
-            </div>
+            <motion.div>
+              <PostHeader
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+              />
+            </motion.div>
+            <PostBody>{stringToMdx(post.content)}</PostBody>
           </>
         )}
       </Layout>
-    </div>
+    </motion.div>
   );
 }
 export async function getStaticProps({ params }) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+const easing = [0.6, -0.05, 0.01, 0.99];
 const HeroBanner = () => {
   return (
     <motion.div>
@@ -25,8 +26,8 @@ const HeroBanner = () => {
           </div>
         </motion.div>
       </motion.div>
-      <motion.div className="w-full">
-        <div className="relative h-[300px] w-full object-cover mb-6 bg-gray-100">
+      <motion.div className="w-full px-4 md:px-">
+        <div className="relative h-[300px] w-full object-cover mb-6 bg-gray-100 rounded-md ">
           <Image
             src="/static/images/3D_scene_total_8.png"
             layout="fill"

@@ -10,14 +10,14 @@ const CoverImage = ({ title, src, slug, height, width }) => {
       height={height}
       quality={100}
       alt={`Post preview ${title}`}
-      className=""
+      className="rounded-lg"
       layout="fixed"
     />
   );
   return (
     <div>
       {slug ? (
-        <Link href={`posts/${slug}`}>
+        <Link href={`/posts/${slug}`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (
