@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const CoverImage = ({ title, src, slug, height, width }) => {
+const CoverImage = ({ title, src, slug, height, width, layout }) => {
   const image = (
     <Image
       src={src}
@@ -11,7 +11,7 @@ const CoverImage = ({ title, src, slug, height, width }) => {
       quality={100}
       alt={`Post preview ${title}`}
       className="rounded-lg"
-      layout="fixed"
+      layout={`${layout}`}
     />
   );
   return (

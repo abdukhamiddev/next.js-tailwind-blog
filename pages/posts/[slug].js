@@ -7,6 +7,7 @@ import { mdxToString, stringToMdx } from '../../lib/mdxSerialization';
 import { motion } from 'framer-motion';
 import PostHeader from '../../components/PostHeader';
 import PostBody from '../../components/PostBody';
+import Avatar from '../../components/avatar';
 
 export default function Post({ post, preview }) {
   const router = useRouter();
@@ -39,7 +40,7 @@ export default function Post({ post, preview }) {
           <div>Loading....</div>
         ) : (
           <>
-            <motion.div>
+            <motion.div className="px-6">
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
@@ -47,6 +48,8 @@ export default function Post({ post, preview }) {
               />
             </motion.div>
             <PostBody>{stringToMdx(post.content)}</PostBody>
+
+            <Avatar />
           </>
         )}
       </Layout>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import CoverImage from './coverImage';
 
 const easing = [0.6, -0.05, 0.01, 0.99];
 const HeroBanner = () => {
@@ -28,7 +29,7 @@ const HeroBanner = () => {
       </motion.div>
       <motion.div className="w-full px-4 md:px-">
         <div className="relative h-[300px] w-full object-cover mb-6 bg-gray-100 rounded-md ">
-          <Image
+          <CoverImage
             src="/static/images/3D_scene_total_8.png"
             layout="fill"
             object="cover"

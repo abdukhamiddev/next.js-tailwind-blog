@@ -17,6 +17,7 @@ const PostPreview = ({ title, coverImage, excerpt, slug }) => {
                     width={250}
                     title={title}
                     height={160}
+                    layout="fixed"
                   />
                 </div>
                 <div className="md:pt-9 xl:pt-0">

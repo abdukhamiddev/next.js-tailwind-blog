@@ -3,11 +3,7 @@ export default function Avatar() {
     <div className="max-w-4xl mx-auto ">
       <div className="flex flex-wrap p-3 mx-auto">
         <div>
-          <div
-            variants={fadeInUp}
-            key="modal-morestories-3"
-            className="flex flex-wrap "
-          >
+          <div key="modal-morestories-3" className="flex flex-wrap ">
             <div className="flex flex-wrap sm:flex-nowrap">
               <div
                 key="modal-morestories-4"
